@@ -1,11 +1,13 @@
-package com.Dinara.lab.task1.task4;
+package com.Dinara.ind.labs.task.task3;
 
 public abstract class Parent {
     int a=1;
     public void print(){
         System.out.println(a);
     }
-    public static void main(String[] args) {new Child().print();}
+    public static void main(String[] args) {
+        new Child().print();
+    }
 }
 
 //Опишем факультет: студенты и преподаватели, группы, расписание, предметы, их свойства.

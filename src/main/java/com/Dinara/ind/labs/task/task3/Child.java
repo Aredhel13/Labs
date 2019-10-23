@@ -1,4 +1,6 @@
-package com.Dinara.lab.task1.task4;
+package com.Dinara.ind.labs.task.task3;
+
+import com.Dinara.ind.labs.task.task3.Parent;
 
 public class Child extends Parent {
     public void print(){

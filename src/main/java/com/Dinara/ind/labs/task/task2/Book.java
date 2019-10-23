@@ -1,4 +1,4 @@
-package com.Dinara.lab.task1;
+package com.Dinara.ind.labs.task.task2;
 
 public class Book {
     private static String author = "Jane Ostin";
