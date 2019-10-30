@@ -6,11 +6,13 @@ public class Student {
     private int id;
     private String name;
     private int age;
+    private String faculty;
     private int codegroup;
     private static Map <Integer, Student> allStudents;
     private static int countId = 0;
 
-    public Student(String name, int age, int codegroup) {
+    public Student(String name, int age, int codegroup)
+    {
         if (allStudents == null){
             allStudents = new HashMap<>();
         }

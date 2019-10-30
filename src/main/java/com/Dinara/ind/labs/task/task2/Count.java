@@ -1,5 +1,6 @@
 package com.Dinara.ind.labs.task.task2;
 
+
 public class Count {
 
     public static void main(String[] args) {
@@ -10,7 +11,8 @@ public class Count {
     {
         String[] words = text.trim().split(" ");
         for (String word : words){
-            System.out.println(word+": "+find(words,word));        }
+            System.out.println(word+": "+find(words,word));
+        }
         return 0;
     }
 
