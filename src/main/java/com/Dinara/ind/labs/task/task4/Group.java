@@ -32,8 +32,6 @@ public class Group {
         Group g1 = new Group( new Student[] {S1});  //создаем группу, в которую помещаем студентов
         Group g2 = new Group( new Student[] {S2, S3, S4});
         Group g3 = new Group( new Student[] {S5});
-        System.out.println(g1);
-        System.out.println(g2);
-        System.out.println(g3);
+
     }
 }

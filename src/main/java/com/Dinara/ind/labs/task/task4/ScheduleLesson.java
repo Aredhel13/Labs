@@ -8,14 +8,16 @@ public class ScheduleLesson {
     private Teacher teacher;
     private String lesson;
     private String time;
+    private String day;
 
-    public ScheduleLesson(Group[] groups,Teacher teacher, String lesson, String time)
+    public ScheduleLesson(Group[] groups,Teacher teacher, String lesson, String time, String day)
     {
 
         this.groups = groups;
         this.teacher = teacher;
         this.lesson = lesson;
         this.time = time;
+        this.day = day;
     }
 
     public void addGroup(Group group){
@@ -25,7 +27,11 @@ public class ScheduleLesson {
 
     @Override
     public String toString(){
-        return Arrays.toString(groups);
+        return String.format("%n"+"Day: " + day +
+                "%n"+"Lesson: " +
+                lesson + "%n"+"Time: " +
+                time +"%n" + "Teacher: " +
+                teacher +"%n");
     }
 
     public static void main(String[] args) {
@@ -43,9 +49,12 @@ public class ScheduleLesson {
         Group g2 = new Group( new Student[] {S2, S3, S4});
         Group g3 = new Group( new Student[] {S5});
 
-        ScheduleLesson SL1 = new ScheduleLesson(new Group[] {g1}, T1,"Java","08:00");
-        ScheduleLesson SL2 = new ScheduleLesson(new Group[] {g2}, T2,"Oracle","09:40");
-        ScheduleLesson SL3 = new ScheduleLesson(new Group[] {g3}, T1,"Java","11:30");
+        ScheduleLesson SL1 = new ScheduleLesson(new Group[] {g1}, T1,"Java","08:00", "Monday");
+        ScheduleLesson SL2 = new ScheduleLesson(new Group[] {g2}, T2,"Oracle","09:40", "Tuesday");
+        ScheduleLesson SL3 = new ScheduleLesson(new Group[] {g3}, T1,"Java","11:30","Friday");
+
+        System.out.printf("Student:" + S1 + "%n");
+        System.out.print(SL1);
 
     }
 

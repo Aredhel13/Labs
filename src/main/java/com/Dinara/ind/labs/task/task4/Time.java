@@ -20,30 +20,31 @@ public class Time {
         System.out.println("\tконец:  " + time.toString());
     }
 
-    public static int[] inputData(Scanner scanner) {
-        int[] data = new int[5];
-        System.out.print("Введите время начала пары: (например, 8:30) ");
-        String[] strTime = scanner.nextLine().split(":");
-        data[0] = Integer.parseInt(strTime[0]);
-        data[1] = Integer.parseInt(strTime[1]);
-        System.out.print("Длительность пары: ");
-        data[2] = scanner.nextInt();
-        System.out.print("Длительность перерыва: ");
-        data[3] = scanner.nextInt();
-        System.out.print("Количество пар: ");
-        data[4] = scanner.nextInt() - 1;
-        return data;
-    }
+//    public static int[] inputData() {
+//       int[] data = new int[5];
+//       data[0] =
+//        System.out.print("Введите время начала пары: (например, 8:30) ");
+//        String[] strTime = scanner.nextLine().split(":");
+////        data[0] = Integer.parseInt(strTime[0]);
+////        data[1] = Integer.parseInt(strTime[1]);
+//        System.out.print("Длительность пары: ");
+////        data[2] = scanner.nextInt();
+//        System.out.print("Длительность перерыва: ");
+////        data[3] = scanner.nextInt();
+////        System.out.print("Количество пар: ");
+////        data[4] = scanner.nextInt() - 1;
+//        return data;
+//    }
 
     enum NameLesson {
         Первая, Вторая, Третья, Четвёртая, Пятая, Шестая, Седьмая, Восьмая
     }
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        int[] lessonOption = inputData(scanner);
-        timeTable(lessonOption);
-        scanner.close();
+       // Scanner scanner = new Scanner(System.in);
+       // int[] lessonOption = inputData();
+ //       timeTable(lessonOption);
+       // scanner.close();
     }
 }
 
