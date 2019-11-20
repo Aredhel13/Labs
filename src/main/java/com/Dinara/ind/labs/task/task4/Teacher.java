@@ -6,6 +6,10 @@ public class Teacher {
     private String lesson;
 
 
+    public String getName() {
+        return name;
+    }
+
     public Teacher(String name, int age, String lesson)
     {
         this.name = name;

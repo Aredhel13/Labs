@@ -5,12 +5,12 @@ import java.util.*;
 public class ScheduleLesson {
 
     private Group[] groups;
-    private Teacher teacher;
+    private String teacher;
     private String lesson;
     private String time;
     private String day;
 
-    public ScheduleLesson(Group[] groups,Teacher teacher, String lesson, String time, String day)
+    public ScheduleLesson(Group[] groups,String  teacher, String lesson, String time, String day)
     {
 
         this.groups = groups;
@@ -49,12 +49,13 @@ public class ScheduleLesson {
         Group g2 = new Group( new Student[] {S2, S3, S4});
         Group g3 = new Group( new Student[] {S5});
 
-        ScheduleLesson SL1 = new ScheduleLesson(new Group[] {g1}, T1,"Java","08:00", "Monday");
-        ScheduleLesson SL2 = new ScheduleLesson(new Group[] {g2}, T2,"Oracle","09:40", "Tuesday");
-        ScheduleLesson SL3 = new ScheduleLesson(new Group[] {g3}, T1,"Java","11:30","Friday");
 
-        System.out.printf("Student:" + S1 + "%n");
-        System.out.print(SL1);
+        ScheduleLesson SL1 = new ScheduleLesson(new Group[] {g1}, T1.getName(),"Java","08:00", "Monday");
+        ScheduleLesson SL2 = new ScheduleLesson(new Group[] {g2}, T2.getName(),"Oracle","09:40", "Tuesday");
+        ScheduleLesson SL3 = new ScheduleLesson(new Group[] {g3}, T1.getName(),"Java","11:30","Friday");
+
+        System.out.printf("Student:" + S2 + "%n");
+        System.out.print(SL2);
 
     }
 

@@ -1,29 +1,71 @@
 package com.Dinara.ind.labs.task.task2;
 
 
+import java.io.*;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.Scanner;
+import java.util.HashMap;
+import java.util.Map;
+
 public class Count {
 
-    public static void main(String[] args) {
-        String strl = "i i you you me i me i you";
-        count(strl);
+    String text;
+    private Map<String, Integer> words_q = new HashMap<>();
+
+    //конструктор
+    public Count(String text) {
+        this.text = text;
+//        Count();
     }
-    public static int count (String text)
-    {
-        String[] words = text.trim().split(" ");
-        for (String word : words){
-            System.out.println(word+": "+find(words,word));
+
+    //переопределение метода
+    @Override
+    public String toString() {
+        StringBuilder builder = new StringBuilder();
+        for (Map.Entry<String, Integer> pair : words_q.entrySet()) {
+            builder.append(pair.getKey()).append(" : ").append(pair.getValue()).append("\n"); //объединение строк
         }
-        return 0;
+        return builder.toString();
     }
 
-
-    private static int find (String[] words, String w) {
-        int count = 0;
-        for(String word : words){
-            if (word.equals(w)) {
-                count++;
+    //основной метод
+    public void Counter() {
+        String[] words = text.trim().split(" ");
+        for (String word : words) {
+            if (!word.equals("")) {
+                int count = words_q.getOrDefault(word, 0);
+                words_q.put(word, count + 1);
             }
         }
-        return count;
     }
+
+    public static String ReadFile(String fileName) throws FileNotFoundException {
+        String s = "";
+        Scanner file = new Scanner(new File(fileName));
+        while (file.hasNext()){
+            s = s.concat(" ");
+            s = s.concat(file.next());
+ //           System.out.println(s);
+        }
+        file.close();
+        return s;
+    }
+
+    // main
+    public static void main(String[] args) throws IOException {
+        String text = "i i you you me i me i you";
+        String f = "C:\\Users\\Lenovo\\IdeaProjects\\start\\src\\main\\resources\\1.txt";
+        Count counter = new Count("a a b b c c a b c dd a");
+        counter.Counter();
+        System.out.println(counter.toString());
+  //     System.out.println(ReadFile(f));
+        counter.Counter();
+        Count counter1 = new Count(ReadFile(f));
+        counter1.Counter();
+        System.out.println(counter1.toString());
+   }
+
+
 }
+
