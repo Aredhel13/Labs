@@ -10,9 +10,9 @@ public class task2 {
     public void CountTest(){
  //       Count count = new Count;
  //         Assertions.assertEquals(1,Count.find("i"));
-        Count test = new Count("a");
-//       Assertions.assertEquals(1, Count.Counter("a"));
-//        Assertions.assertEquals(1, Count.count("a a"));
-//        Assertions.assertEquals(2, Count.count("a b a"));
+        Count test = new Count("a b b b b b");
+//       Assertions.assertEquals(1, test.col("a"));
+        Assertions.assertEquals(5, test.col("b"));
+//        Assertions.assertEquals(0, test.col("a b a"));
     }
 }

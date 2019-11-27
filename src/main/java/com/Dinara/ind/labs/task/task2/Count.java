@@ -16,7 +16,7 @@ public class Count {
     //конструктор
     public Count(String text) {
         this.text = text;
-//        Count();
+        Counter();
     }
 
     //переопределение метода
@@ -40,17 +40,24 @@ public class Count {
         }
     }
 
-    public static String ReadFile(String fileName) throws FileNotFoundException {
-        String s = "";
-        Scanner file = new Scanner(new File(fileName));
-        while (file.hasNext()){
-            s = s.concat(" ");
-            s = s.concat(file.next());
- //           System.out.println(s);
-        }
-        file.close();
-        return s;
+    Map<String,Integer> getWordsStatistic(){return this.words_q;}
+
+    public Integer col(String word){
+        System.out.println(words_q);
+        return words_q.get(word);
     }
+
+//    public static String ReadFile(String fileName) throws FileNotFoundException {
+//        String s = "";
+//        Scanner file = new Scanner(new File(fileName));
+//        while (file.hasNext()){
+//            s = s.concat(" ");
+//            s = s.concat(file.next());
+// //           System.out.println(s);
+//        }
+//        file.close();
+//        return s;
+//    }
 
     // main
     public static void main(String[] args) throws IOException {
@@ -59,12 +66,14 @@ public class Count {
         Count counter = new Count("a a b b c c a b c dd a");
         counter.Counter();
         System.out.println(counter.toString());
-  //     System.out.println(ReadFile(f));
+  /*
+     System.out.println(ReadFile(f));
         counter.Counter();
         Count counter1 = new Count(ReadFile(f));
         counter1.Counter();
         System.out.println(counter1.toString());
-   }
+*/
+    }
 
 
 }
