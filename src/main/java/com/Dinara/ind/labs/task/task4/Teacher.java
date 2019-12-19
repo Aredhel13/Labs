@@ -1,28 +1,35 @@
 package com.Dinara.ind.labs.task.task4;
 
 public class Teacher {
-    private String name;
-    private int age;
-    private String lesson;
+    String name;
+    int id;
 
+    public Teacher(String name){
+        this.name = name;
+        this.id = id;
+    }
 
     public String getName() {
         return name;
     }
-
-    public Teacher(String name, int age, String lesson)
-    {
-        this.name = name;
-        this.age = age;
-        this.lesson = lesson;
+//
+    public int getId() {
+        return id;
     }
 
-    @Override
-    public String toString() {
-        return "Teacher{" +
-                ", name = '" + name + '\'' +
-                ", age = " + age +
-                ", lesson = " + lesson +
-                '}';
-    }
+
+//
+//    public String getName() {
+//        return name;
+//    }
+//
+//
+//    @Override
+//    public String toString() {
+//        return "Teacher{" +
+//                ", name = '" + name + '\'' +
+//                ", age = " + age +
+//                ", lesson = " + lesson +
+//                '}';
+//    }
 }

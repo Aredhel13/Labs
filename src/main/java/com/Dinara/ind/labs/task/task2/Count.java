@@ -1,10 +1,6 @@
 package com.Dinara.ind.labs.task.task2;
 
 
-import java.io.*;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.util.Scanner;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -12,6 +8,10 @@ public class Count {
 
     String text;
     private Map<String, Integer> words_q = new HashMap<>();
+
+    public Map<String, Integer> get_words_col() {
+        return words_q;
+    };
 
     //конструктор
     public Count(String text) {
@@ -60,9 +60,8 @@ public class Count {
 //    }
 
     // main
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
         String text = "i i you you me i me i you";
-        String f = "C:\\Users\\Lenovo\\IdeaProjects\\start\\src\\main\\resources\\1.txt";
         Count counter = new Count("a a b b c c a b c dd a");
         counter.Counter();
         System.out.println(counter.toString());

@@ -16,5 +16,8 @@ public class Collection {
     //TreeSet<>() - для сортировки set
     Map<String,Integer> map = new HashMap<>();
 
+    public static void main(String[] args) {
+        System.out.println("njfhhg");
+    }
 
 }
